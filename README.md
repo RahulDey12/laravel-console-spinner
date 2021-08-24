@@ -37,4 +37,4 @@ class SimpleLaravelCommand extends Command
 The `$spinner` is compatible with Symfony `ProgressBar`, so you can run any method of this class.
 
 ## Licence
-This package is released under the MIT license.
+This package is released under the [MIT license](https://github.com/RahulDey12/laravel-console-spinner/blob/master/LICENSE).
