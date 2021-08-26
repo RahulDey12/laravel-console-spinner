@@ -36,5 +36,12 @@ class SimpleLaravelCommand extends Command
 ```
 The `$spinner` is compatible with Symfony `ProgressBar`, so you can run any method of this class.
 
+Or you can also use with `withSpinner` method by giving an iterable.
+```php
+$this->withSpinner(User::all(), function($user) {
+    // Do your stuff with $user
+}, 'Loading...');
+```
+
 ## Licence
 This package is released under the [MIT license](https://github.com/RahulDey12/laravel-console-spinner/blob/master/LICENSE).

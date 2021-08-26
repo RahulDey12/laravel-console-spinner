@@ -2,11 +2,15 @@
 
 namespace Rahul900Day\LaravelConsoleSpinner;
 
-use Illuminate\Console\OutputStyle;
+use Symfony\Component\Console\Helper\ProgressBar;
+use Symfony\Component\Console\Output\ConsoleOutput;
 
 class Spinner
 {
-    protected const CHARS = ['⠏', '⠛', '⠹', '⢸', '⣰', '⣤', '⣆', '⡇'];
+    /**
+     * @var array
+     */
+    protected $chars;
 
     /**
      * @var \Symfony\Component\Console\Helper\ProgressBar
@@ -18,15 +22,18 @@ class Spinner
      */
     protected $step;
 
-    public function __construct(OutputStyle $output, int $max = 0)
+    public function __construct(int $max = 0)
     {
-        $this->progressBar = $output->createProgressBar($max);
+        $this->step = 0;
+        $this->chars = config('console-spinner.chars');
+
+        $section = (new ConsoleOutput())->section();
+        $this->progressBar = new ProgressBar($section, $max);
         $this->progressBar->setBarCharacter('✔');
+        $this->progressBar->setProgressCharacter($this->chars[0]);
         $this->progressBar->setFormat('%bar% %message%');
         $this->progressBar->setBarWidth(1);
         $this->progressBar->setRedrawFrequency(31);
-
-        $this->step = 0;
     }
 
     /**
@@ -50,7 +57,7 @@ class Spinner
     public function advance(int $step = 1)
     {
         $this->step += $step;
-        $this->progressBar->setProgressCharacter(self::CHARS[$this->step % 8]);
+        $this->progressBar->setProgressCharacter($this->chars[$this->step % count($this->chars)]);
         $this->progressBar->advance($step);
     }
 }
