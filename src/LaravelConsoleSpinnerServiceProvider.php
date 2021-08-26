@@ -16,7 +16,7 @@ class LaravelConsoleSpinnerServiceProvider extends ServiceProvider
         Command::macro(
             'spinner',
             function (int $max = 0) {
-                return new Spinner($max);
+                return new Spinner($this->output, $max);
             }
         );
 
