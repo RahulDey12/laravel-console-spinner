@@ -29,19 +29,19 @@ class LaravelConsoleSpinnerServiceProvider extends ServiceProvider
                 $spinner->setMessage($message);
                 $spinner->start();
 
-                if(is_iterable($totalSteps)) {
+                if (is_iterable($totalSteps)) {
                     foreach ($totalSteps as $item) {
                         $callback($item, $spinner);
 
                         $spinner->advance();
                     }
-                }else {
+                } else {
                     $callback($spinner);
                 }
 
                 $spinner->finish();
 
-                if(is_iterable($spinner)) {
+                if (is_iterable($spinner)) {
                     return $totalSteps;
                 }
             }
