@@ -11,7 +11,7 @@ class LaravelConsoleSpinnerServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../config/console-spinner.php' => config_path('console-spinner.php'),
-        ]);
+        ], 'console-spinner-config');
 
         Command::macro(
             'spinner',
