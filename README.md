@@ -1,6 +1,7 @@
 # Laravel Console Spinner
 Laravel Console Spinner was created by [Rahul Dey](https://github.com/RahulDey12). It is just a custom Progress Bar inspired by [icanhazstring/symfony-console-spinner](https://github.com/icanhazstring/symfony-console-spinner).
 
+[![StyleCI Status](https://github.styleci.io/repos/399605115/shield)](https://styleci.io/repos/399605115)
 [![Total Downloads](http://poser.pugx.org/rahul900day/laravel-console-spinner/downloads)](https://packagist.org/packages/rahul900day/laravel-console-spinner)
 [![Version](http://poser.pugx.org/rahul900day/laravel-console-spinner/version)](https://packagist.org/packages/rahul900day/laravel-console-spinner)
 [![PHP Version Require](http://poser.pugx.org/rahul900day/laravel-console-spinner/require/php)](https://packagist.org/packages/rahul900day/laravel-console-spinner)
