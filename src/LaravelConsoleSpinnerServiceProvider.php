@@ -22,7 +22,7 @@ class LaravelConsoleSpinnerServiceProvider extends ServiceProvider
 
         Command::macro(
             'withSpinner',
-            function ($totalSteps, \Closure $callback, string $message = '', int array $options = []) {
+            function ($totalSteps, \Closure $callback, string $message = '', array $options = []) {
                 $spinner = $this->spinner(
                     is_iterable($totalSteps) ? count($totalSteps) : $totalSteps
                 );
