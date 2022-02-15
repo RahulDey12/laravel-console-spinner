@@ -27,13 +27,13 @@ class LaravelConsoleSpinnerServiceProvider extends ServiceProvider
                     is_iterable($totalSteps) ? count($totalSteps) : $totalSteps
                 );
                 $spinner->setMessage($message);
-                
+
                 // Set more options
-                foreach($options as $option => $value) {
-                    $method = 'set' . ucfirst($option);
+                foreach ($options as $option => $value) {
+                    $method = 'set'.ucfirst($option);
                     $spinner->{$method}($value);
                 }
-                
+
                 $spinner->start();
 
                 if (is_iterable($totalSteps)) {
