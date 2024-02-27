@@ -1,7 +1,15 @@
 {
     "name": "rahul900day/laravel-console-spinner",
     "description": "Laravel Console Spinner is a spinner output for Laravel command line.",
-    "keywords": ["console", "command-line", "php", "cli", "laravel", "artisan", "symfony"],
+    "keywords": [
+        "console",
+        "command-line",
+        "php",
+        "cli",
+        "laravel",
+        "artisan",
+        "symfony"
+    ],
     "license": "MIT",
     "authors": [
         {
@@ -11,8 +19,8 @@
     ],
     "require": {
         "php": "^7.3|^8.0",
-        "illuminate/console": "^6.0|^7.0|^8.0|^9.0|^10.0",
-        "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0"
+        "illuminate/console": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0"
     },
     "autoload": {
         "psr-4": {
